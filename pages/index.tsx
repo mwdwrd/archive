@@ -1,3 +1,6 @@
+/* eslint-disable func-names */
+/* eslint-disable import/extensions */
+/* eslint-disable import/no-unresolved */
 /* eslint-disable max-len */
 import React from 'react';
 import type { NextPage } from 'next';
@@ -87,15 +90,7 @@ const BlockContent = styled.div`
   }
 `;
 
-const Link = styled.div`
-  font-family: ${(props) => props.theme.font.heading};
-  font-weight: 100;
-  margin-bottom: 12px;
-  font-size: 24px;
-  padding: 0 24px;
-`;
-
-const Home: NextPage = function ({ tweets }) {
+const Home: NextPage = function ({ tweets }: any) {
   return (
     <>
       <Head>
@@ -138,7 +133,7 @@ const Home: NextPage = function ({ tweets }) {
               <Block>
                 <BlockHeader>Fashion Week</BlockHeader>
                 <BlockDesc>
-                  Conceived of as a bridge between the worlds of streetwear and high fashion, designer Virgil Abloh's Off-White explores concepts of branding, the zeitgeist, and the expression of youth culture in the contemporary moment.
+                  Conceived of as a bridge between the worlds of streetwear and high fashion, designer Virgil Ablohs Off-White explores concepts of branding, the zeitgeist, and the expression of youth culture in the contemporary moment.
                 </BlockDesc>
                 <BlockContent>
                   <img alt="Fashion Week" src="https://64.media.tumblr.com/e3f920482de3c0eb97fce6d5c6b09597/tumblr_n3nffsM93w1r8ecsko1_1280.jpg" />

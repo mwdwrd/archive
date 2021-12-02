@@ -1,3 +1,5 @@
+/* eslint-disable func-names */
+
 /* eslint-disable react/no-array-index-key */
 /* eslint-disable max-len */
 import React from 'react';
@@ -30,8 +32,7 @@ const Wrapper = styled.div`
     }
 `;
 
-const Tweet = function ({ tweet }) {
-  console.log(tweet);
+const Tweet = function ({ tweet }: any) {
   return (
     <TweetBlock>
       <a target="_blank" href={`https://twitter.com/mwdwrd/status/${tweet.id}`} rel="noreferrer">
@@ -42,11 +43,11 @@ const Tweet = function ({ tweet }) {
         <>
           {tweet.media.type === 'photo'
             && (
-            <img src={tweet.media.url} />
+            <img src={tweet.media.url} alt="Matthew Woodward" />
             )}
             {tweet.media.type === 'video'
             && (
-            <img src={tweet.media.preview_image_url} />
+            <img src={tweet.media.preview_image_url} alt="Matthew Woodward" />
             )}
         </>
         )}
@@ -56,12 +57,12 @@ const Tweet = function ({ tweet }) {
   );
 };
 
-const Tweets = function ({ tweets }) {
+const Tweets = function ({ tweets }: any) {
   const { data, includes } = tweets;
-  const tweetData = data.map((tweet) => {
+  const tweetData = data.map((tweet: any) => {
     if (tweet.attachments) {
       const key = tweet.attachments.media_keys[0];
-      const mediaObject = includes.media.filter((e) => e.media_key === key);
+      const mediaObject = includes.media.filter((e: any) => e.media_key === key);
       return {
         ...tweet,
         media: mediaObject[0],
