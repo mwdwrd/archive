@@ -1,23 +1,24 @@
 /* eslint-disable func-names */
 /* eslint-disable import/extensions */
 /* eslint-disable import/no-unresolved */
+// eslint-disable-next-line func-names
 import React from 'react';
 import type { AppProps } from 'next/app';
-import { ThemeProvider } from 'styled-components';
+import { ThemeProvider } from 'next-themes';
 import GlobalStyle from '../styles/globalStyles';
-import theme from '../styles/theme';
+import Layout from '../components/Layout';
 
-// eslint-disable-next-line func-names
-
-const MyApp = function ({ Component, pageProps }: AppProps) {
+const Archive = function ({ Component, pageProps }: AppProps) {
   return (
     <>
       <GlobalStyle />
-      <ThemeProvider theme={theme}>
-        <Component {...pageProps} />
+      <ThemeProvider defaultTheme="light">
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
       </ThemeProvider>
     </>
   );
 };
 
-export default MyApp;
+export default Archive;

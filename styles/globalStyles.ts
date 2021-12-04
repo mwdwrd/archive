@@ -1,6 +1,21 @@
 import { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
+  :root {
+    --fg: #000;
+    --bg: #fff;
+    --fontHeading: 'Inconsolata';
+
+    --text: #000;
+    --bg: #fff;
+    --lime: #00ff00;
+  }
+
+  [data-theme="dark"] {
+    --text: #fff;
+    --bg: #000;
+  }
+
   /* Using this inherit reset method means you can use content-box or padding-box without a universal selector overriding your CSS */
   html {
     box-sizing: border-box;

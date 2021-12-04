@@ -8,7 +8,7 @@ import styled from 'styled-components';
 const TweetBlock = styled.div`
   padding: 0;
   margin: 0 24px 24px;
-  font-family: ${(props) => props.theme.font.heading};
+  font-family: var(--fontHeading);
   font-size: 14px;
   font-weight: 100;
   border-bottom: 1px solid #333;
@@ -57,7 +57,7 @@ const Tweet = function ({ tweet }: any) {
   );
 };
 
-const Tweets = function ({ tweets }: any) {
+const TwitterFeed = function ({ tweets }: any) {
   const { data, includes } = tweets;
   const tweetData = data.map((tweet: any) => {
     if (tweet.attachments) {
@@ -78,4 +78,4 @@ const Tweets = function ({ tweets }: any) {
   );
 };
 
-export default Tweets;
+export default TwitterFeed;
