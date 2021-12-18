@@ -1,6 +1,4 @@
 /* eslint-disable func-names */
-/* eslint-disable import/extensions */
-/* eslint-disable import/no-unresolved */
 // eslint-disable-next-line func-names
 import React from 'react';
 import type { AppProps } from 'next/app';

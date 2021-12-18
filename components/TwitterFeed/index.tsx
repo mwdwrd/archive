@@ -13,6 +13,11 @@ const TweetBlock = styled.div`
   font-weight: 100;
   border-bottom: 1px solid #333;
 `;
+const TweetDate = styled.div`
+  font-size: 12px;
+  font-weight: 200;
+  color: var(--primary);
+`;
 
 const TweetBlockDesc = styled.div`
   font-size: 12px;
@@ -36,6 +41,7 @@ const Tweet = function ({ tweet }: any) {
   return (
     <TweetBlock>
       <a target="_blank" href={`https://twitter.com/mwdwrd/status/${tweet.id}`} rel="noreferrer">
+        <TweetDate>05.15.12</TweetDate>
         <TweetBlockDesc>
           {tweet.text}
           {tweet.media

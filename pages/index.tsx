@@ -1,6 +1,4 @@
 /* eslint-disable func-names */
-/* eslint-disable import/extensions */
-/* eslint-disable import/no-unresolved */
 /* eslint-disable max-len */
 import React from 'react';
 import type { NextPage } from 'next';
@@ -11,6 +9,7 @@ import 'simplebar/src/simplebar.css';
 import needle from 'needle';
 import TwitterFeed from '../components/TwitterFeed';
 import VisualDiary from '../components/VisualDiary';
+import ListItem from '../components/ListItem';
 
 const Wrapper = styled.div`
   background-color: var(--bg);
@@ -18,12 +17,11 @@ const Wrapper = styled.div`
   margin: 0;
   color: var(--text);
   position: fixed;
-  top: 24px;
+  top: 48px;
   left: 0;
   right: 0;
-  bottom: 0;
+  bottom: 24px;
 `;
-
 const Heading = styled.h1`
   margin: 0;
   padding: 24px;
@@ -34,11 +32,9 @@ const Heading = styled.h1`
   color: var(--text);
   margin-bottom: 24px;
 `;
-
 const Columns = styled.div`
   display: flex;
   height: 100%;
-  border-top: 1px solid var(--text);
 `;
 const Column = styled.div`
   flex: 1;
@@ -62,9 +58,13 @@ const Home: NextPage = function ({ tweets }: any) {
         <Columns>
           <FirstColumn>
             <SimpleBarReact forceVisible="y" autoHide={false} style={{ maxHeight: '100%' }}>
-              <Heading>
-                Selected Works
-              </Heading>
+              <Heading>Selected Works</Heading>
+              <ListItem title={'Chunks World'} date={2021} categories={['NFT', 'Web3', '3D']} />
+              <ListItem title={'The Choadz'} date={2021} categories={['NFT', 'Web3', '3D']} />
+              <ListItem title={'The New York Dao'} date={2021} categories={['Community']} />
+              <ListItem title={'American Express'} date={2021} categories={['Live Performance', 'NFT']} />
+              <ListItem title={'Merch Aid'} date={2021} categories={['Live Performance', 'NFT']} />
+              <ListItem title={'Nike New York'} date={2021} categories={['Community']} />
             </SimpleBarReact>
           </FirstColumn>
           <Column>

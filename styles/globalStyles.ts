@@ -8,12 +8,13 @@ export default createGlobalStyle`
 
     --text: #000;
     --bg: #fff;
-    --lime: #00ff00;
+    --primary: #ff00f6;
   }
 
   [data-theme="dark"] {
     --text: #fff;
     --bg: #000;
+    --primary: #00ff00;
   }
 
   /* Using this inherit reset method means you can use content-box or padding-box without a universal selector overriding your CSS */

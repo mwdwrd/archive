@@ -1,38 +1,26 @@
-/* eslint-disable react/no-array-index-key */
-/* eslint-disable max-len */
-
 import React from 'react';
 import Ticker from 'react-ticker';
-import styled from 'styled-components';
-
-const Content = styled.h1`
-  margin: 0;
-  padding: 0;
-  font-family: var(--fontHeading);
-  font-size: 14px;
-  font-weight: 100;
-  text-transform: uppercase;
-  color: var(--text);
-  height: 36px;
-  line-height: 36px;
-`;
-
-const Wrapper = styled.div`
-  height: 36px;
-`;
+import * as Styles from './styles';
 
 const TopNav = function () {
+  const [isMoving, setIsMoving] = React.useState(true);
+
   return (
-    <Wrapper>
-      <Ticker>
+    <Styles.Wrapper onMouseEnter={() => setIsMoving(false)} onMouseLeave={() => setIsMoving(true)}>
+      <Ticker move={isMoving}>
         {() => (
-          <Content>
-            A series of fortunate errors / Matthew Woodward / Emmy Nominated Creative Director / +1 (646) 571-9510 /
-            {' '}
-          </Content>
+          <Styles.Items>
+            <Styles.Item>Matthew James Woodward [mwdwrd]</Styles.Item>
+            <Styles.Item>A series of fortunate errors</Styles.Item>
+            <Styles.Item>Creative Coder, Designer and Artist</Styles.Item>
+            <Styles.Item>+1 (646) 571-9510</Styles.Item>
+            <Styles.Item><a target="_blank" href="https://twitter.com/mwdwrd" rel="noreferrer">Twitter</a></Styles.Item>
+            <Styles.Item><a target="_blank" href="https://instagram.com/matty.eth/" rel="noreferrer">Instagram</a></Styles.Item>
+            <Styles.Item><a target="_blank" href="https://github.com/mwdwrd" rel="noreferrer">Github</a></Styles.Item>
+          </Styles.Items>
         )}
       </Ticker>
-    </Wrapper>
+    </Styles.Wrapper>
   );
 };
 

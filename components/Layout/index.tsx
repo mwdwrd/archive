@@ -1,8 +1,3 @@
-/* eslint-disable import/extensions */
-/* eslint-disable import/no-unresolved */
-/* eslint-disable react/no-array-index-key */
-/* eslint-disable max-len */
-
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import BottomNav from '../BottomNav';
@@ -14,7 +9,7 @@ const Header = styled.header`
   top: 0;
   left: 0;
   right: 0;
-  height: 36px;
+  height: 48px;
   color: var(--text);
   border-bottom: 1px solid var(--text);
   background-color: var(--bg);
@@ -31,7 +26,7 @@ const Footer = styled.footer`
   z-index: 100;
 `;
 const Main = styled.main`
-  margin: 36px 0;
+  margin: 48px 0 36px 0;
 `;
 
 const Layout = function ({ children }: any) {

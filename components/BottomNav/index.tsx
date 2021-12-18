@@ -1,3 +1,4 @@
+/* eslint-disable func-names */
 /* eslint-disable react/no-array-index-key */
 /* eslint-disable max-len */
 
