@@ -1,7 +1,3 @@
-/* eslint-disable jsx-a11y/media-has-caption */
-/* eslint-disable func-names */
-/* eslint-disable react/no-array-index-key */
-/* eslint-disable max-len */
 import React from 'react';
 import styled from 'styled-components';
 
@@ -45,7 +41,7 @@ const VisualDiary = function () {
     <Wrapper>
       <Entry>
         <Date>05.05.15</Date>
-        <Desc>The 8th and final Series 3 - Entropy token was minted this morning to @FingerprintsDAO multisig vault, where it will remain in "mint condition". Entropy is a generative audiovisual work that will "degrade" each time the NFT is transferred.</Desc>
+        <Desc>The 8th and final Series 3 - Entropy token was minted this morning to @FingerprintsDAO multisig vault, where it will remain in mint condition. Entropy is a generative audiovisual work that will degrade each time the NFT is transferred.</Desc>
         <Media>
           <video controls>
             <source src="audiovisual.mp4" type="video/mp4" />

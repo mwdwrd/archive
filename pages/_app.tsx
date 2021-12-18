@@ -1,5 +1,3 @@
-/* eslint-disable func-names */
-// eslint-disable-next-line func-names
 import React from 'react';
 import type { AppProps } from 'next/app';
 import { ThemeProvider } from 'next-themes';

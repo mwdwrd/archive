@@ -1,5 +1,3 @@
-/* eslint-disable func-names */
-/* eslint-disable max-len */
 import React from 'react';
 import type { NextPage } from 'next';
 import Head from 'next/head';
